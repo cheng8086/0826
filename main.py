@@ -184,7 +184,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     }
     # 获取距离下次开学的时间
     Startschool_day = get_birthday(value["school_days"], year, today)
-       if Startschool_day == 0:
+        if Startschool_day == 0:
             school_data = "今天{}开学哦，祝{}开学快乐！".format(value["name"], value["name"])
         else:
             school_data = "距离{}的开学还有{}天".format(value["name"], Startschool_day)
