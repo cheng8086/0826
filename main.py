@@ -177,14 +177,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
             }
         }
     }
-    # 获取距离下次开学的时间
-    Startschool_day = get_birthday(value["school_date"], year, today)
-    if Startschool_day == 0:
-        school_data = "今天{}开学哦，祝{}开学快乐！".format(value["name"], value["name"])
-    else:
-        school_data = "距离{}的开学还有{}天".format(value["name"], Startschool_day)
-        # 将生日数据插入data
-    data["data"][key] = {"value": school_data, "color": get_color()}
+   
     for key, value in birthdays.items():
         # 获取距离下次生日的时间
         birth_day = get_birthday(value["birthday"], year, today)
