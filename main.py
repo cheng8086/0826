@@ -135,8 +135,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     school_date = date(school_year, school_month, school_day)
     # 获取在一起的日期差
     love_days = str(today.__sub__(love_date)).split(" ")[0]
-     # 获取开学的日期差
-    school_days = str(today.__sub__(school_date)).split(" ")[0]
+    
     # 获取所有生日数据
     birthdays = {}
     for k, v in config.items():
@@ -183,7 +182,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         }
     }
     # 获取距离下次开学的时间
-    Startschool_day = get_birthday(value["school_days"], year, today)
+    Startschool_day = get_birthday(value["school_date"], year, today)
     if Startschool_day == 0:
         school_data = "今天{}开学哦，祝{}开学快乐！".format(value["name"], value["name"])
     else:
