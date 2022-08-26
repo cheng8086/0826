@@ -129,8 +129,8 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     love_day = int(config["love_date"].split("-")[2])
     love_date = date(love_year, love_month, love_day)
     #开学时间
-      school_year = int(config["school_date"].split("-")[0])
-   school_month = int(config["school_date"].split("-")[1])
+    school_year = int(config["school_date"].split("-")[0])
+    school_month = int(config["school_date"].split("-")[1])
     school_day = int(config["school_date"].split("-")[2])
     school_date = date(love_year, love_month, love_day)
     # 获取在一起的日期差
